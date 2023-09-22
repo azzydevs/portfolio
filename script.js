@@ -19,46 +19,46 @@ function toggleMenu() {
   // Dark / light mode
   
   const btn = document.getElementById("modeToggle");
-  const btn2 = document.getElementById("modeToggle2");
-  const themeIcons = document.querySelectorAll(".icon");
-  const currentTheme = localStorage.getItem("theme");
-  
+const btn2 = document.getElementById("modeToggle2");
+const themeIcons = document.querySelectorAll(".icon");
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme === "dark") {
+  setDarkMode();
+}
+
+btn.addEventListener("click", function () {
+  setTheme();
+});
+
+btn2.addEventListener("click", function () {
+  setTheme();
+});
+
+function setTheme() {
+  let currentTheme = document.body.getAttribute("theme");
+
   if (currentTheme === "dark") {
+    setLightMode();
+  } else {
     setDarkMode();
   }
-  
-  btn.addEventListener("click", function () {
-    setTheme();
+}
+
+function setDarkMode() {
+  document.body.setAttribute("theme", "dark");
+  localStorage.setItem("theme", "dark");
+
+  themeIcons.forEach((icon) => {
+    icon.src = icon.getAttribute("src-dark");
   });
-  
-  btn2.addEventListener("click", function () {
-    setTheme();
+}
+
+function setLightMode() {
+  document.body.removeAttribute("theme");
+  localStorage.setItem("theme", "light");
+
+  themeIcons.forEach((icon) => {
+    icon.src = icon.getAttribute("src-light");
   });
-  
-  function setTheme() {
-    let currentTheme = document.body.getAttribute("theme");
-  
-    if (currentTheme === "dark") {
-      setLightMode();
-    } else {
-      setDarkMode();
-    }
-  }
-  
-  function setDarkMode() {
-    document.body.setAttribute("theme", "dark");
-    localStorage.setItem("theme", "dark");
-  
-    themeIcons.forEach((icon) => {
-      icon.src = icon.getAttribute("src-dark");
-    });
-  }
-  
-  function setLightMode() {
-    document.body.removeAttribute("theme");
-    localStorage.setItem("theme", "light");
-  
-    themeIcons.forEach((icon) => {
-      icon.src = icon.getAttribute("src-light");
-    });
-  }
+}
