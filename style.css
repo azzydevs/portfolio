@@ -805,5 +805,5 @@ footer .footer-text {
   line-height: 1.4; /* Responsive line height */
   margin: 0; /* Remove default margins to save space */
   padding: 10px; /* Add some padding for readability on mobile */
-  word-spacing: 0.1rem; /* Adjust word spacing as needed */
+  word-spacing: 0rem; /* Adjust word spacing as needed */
 }
