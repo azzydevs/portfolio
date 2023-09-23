@@ -16,9 +16,10 @@ function toggleMenu() {
 }
 
   
-  // Dark / light mode
   
-  const btn = document.getElementById("modeToggle");
+// Dark & Light mode
+  
+const btn = document.getElementById("modeToggle");
 const btn2 = document.getElementById("modeToggle2");
 const themeIcons = document.querySelectorAll(".icon");
 const currentTheme = localStorage.getItem("theme");
