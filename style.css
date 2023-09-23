@@ -771,8 +771,6 @@ footer .footer-text {
 ::-webkit-scrollbar-track:hover {
   background-color: #d0d0d0; /* Background color on hover */
 }
-/* Define default styles */
-/* ... (Previous styles) ... */
 
 /* Style for the Quit button */
 .menu-links #quitButton {
