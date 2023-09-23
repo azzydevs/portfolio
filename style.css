@@ -798,3 +798,12 @@ footer .footer-text {
 .text-container {
   text-align: center;
   font-style: bold;
+}
+/* Example CSS for reducing word spacing in the mobile-friendly paragraph */
+.text-container {
+  font-size: 1rem; /* Responsive font size */
+  line-height: 1.4; /* Responsive line height */
+  margin: 0; /* Remove default margins to save space */
+  padding: 10px; /* Add some padding for readability on mobile */
+  word-spacing: 0.1rem; /* Adjust word spacing as needed */
+}
