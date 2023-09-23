@@ -797,19 +797,11 @@ footer .footer-text {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-/* CSS for the mobile-friendly paragraph */
+/* Example CSS for reducing word spacing in the mobile-friendly paragraph */
 .text-container {
   font-size: 1rem; /* Responsive font size */
   line-height: 1.4; /* Responsive line height */
   margin: 0; /* Remove default margins to save space */
   padding: 10px; /* Add some padding for readability on mobile */
-  word-spacing: 0.05em; /* Adjust word spacing as needed (smaller value for less space) */
-  text-align: justify; /* Justify text for better formatting */
-}
-
-/* Media query for smaller screens, if needed */
-@media (max-width: 768px) {
-  .text-container {
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
-  }
+  word-spacing: 0.1rem; /* Adjust word spacing as needed */
 }
